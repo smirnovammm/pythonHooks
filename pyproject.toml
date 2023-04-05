@@ -14,3 +14,6 @@ dependencies = []
 [tool.setuptools.packages.find]
 include = ["python_hooks*", "prepare-commit-message*"]
 
+[project.scripts]
+python_hooks = "python_hooks.prepare-commit-message:prepare"
+
