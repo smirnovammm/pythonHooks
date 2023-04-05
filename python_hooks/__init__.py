@@ -11,14 +11,16 @@ regex = r"^[a-zA-Z]{1,5}-[0-9]{1,9}"
 
 def perepare_commit_msg():
     if re.search(regex, branch):
-        found_obj = re.match(regex, branch)
-        prefix = found_obj.group(0)
-        with open(commit_msg_filepath, "r+") as file:
-            commit_msg = file.read()
-            if commit_msg.find(prefix) == -1:
-                file.seek(0, 0)
-                file.write(f"[{prefix}] {commit_msg}")
+        try:
+            found_obj = re.match(regex, branch)
+            prefix = found_obj.group(0)
+            with open(commit_msg_filepath, "r+") as file:
+                commit_msg = file.read()
+                if commit_msg.find(prefix) == -1:
+                    file.seek(0, 0)
+                    file.write(f"[{prefix}] {commit_msg}")
+        except Exception as e:
+            print(f"{e}")
     else:
-        print(red_color + "Branch name does not contain ticket number")
-        print("prepare-commit-msg hook failed")
+        print("Branch name does not contain ticket number")
         sys.exit(1)
