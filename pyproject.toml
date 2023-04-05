@@ -11,9 +11,6 @@ readme = "README.md"
 license = {text = "MIT"}
 dependencies = []
 
-[tool.setuptools.packages.find]
-include = ["python_hooks*", "prepare-commit-message*"]
-
 [project.scripts]
-python_hooks = "python_hooks:perepare_commit_msg"
+prepare_commit_msg = "python_hooks:perepare_commit_msg"
 
