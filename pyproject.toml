@@ -11,3 +11,6 @@ readme = "README.md"
 license = {text = "MIT"}
 dependencies = []
 
+[tool.setuptools.packages.find]
+include = ["python_hooks*", "prepare-commit-message*"]
+
