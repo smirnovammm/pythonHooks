@@ -15,5 +15,5 @@ dependencies = []
 include = ["python_hooks*", "prepare-commit-message*"]
 
 [project.scripts]
-python_hooks = "python_hooks.prepare-commit-message:prepare"
+python_hooks = "python_hooks:prepare"
 
