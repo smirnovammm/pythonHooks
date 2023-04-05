@@ -11,5 +11,3 @@ readme = "README.md"
 license = {text = "MIT"}
 dependencies = []
 
-[tool.pytest.ini_options]
-testpaths = 'tests'
