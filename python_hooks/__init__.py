@@ -14,7 +14,7 @@ def perepare_commit_msg():
         try:
             found_obj = re.match(regex, branch)
             prefix = found_obj.group(0)
-            with open(commit_msg_filepath, "r+") as file:
+            with open(file=commit_msg_filepath, mode="rw", encoding="utf-8", errors="ignore") as file:
                 commit_msg = file.read()
                 if commit_msg.find(prefix) == -1:
                     file.seek(0, 0)
