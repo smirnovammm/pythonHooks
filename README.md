@@ -12,8 +12,6 @@ This is hooks for python projects. Use with pre-commit
 
 ## How to use in your project:
 
-- requirements.txt: `api-session @ git+http://git@gitlab.com/tabby.ai/testing/tools/python-hooks`
-- install with pip: `pip install git+https://gitlab.com/tabby.ai/testing/tools/python-hooks`
 - add hook into your pre-commit file as:
               
 ```repos:
